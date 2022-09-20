@@ -34,7 +34,104 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    </style>
+
+<style>
+	* {margin:0;padding:0;}
+	.section {}
+	.section input[id*="slide"] {display:none;}
+
+	.section .slide-wrap {max-width:1200px;margin:0 auto;}
+	.section .slidelist {white-space:nowrap;font-size:0;overflow:hidden;}
+	.section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+	.section .slidelist > li > a {display:block;position:relative;}
+	.section .slidelist > li > a img {width:100%;}
+	.section .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+	.section .slidelist .left {left:30px;background:url('./img/left.png') center center / 100% no-repeat;}
+	.section .slidelist .right {right:30px;background:url('./img/right.png') center center / 100% no-repeat;}
+	.section .slidelist .textbox {position:absolute;z-index:1;top:50%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
+	
+	.section .slidelist .textbox h3 {font-size:50px;color:#fff;opacity:0;transform:translateY(30px);transition:all .5s;}
+	.section .slidelist .textbox p {font-size:24px;color:#fff;opacity:0;transform:translateY(30px);transition:all .5s;}
+
+	.section input[id="slide01"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(0%);}
+	.section input[id="slide02"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-100%);}
+	.section input[id="slide03"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-200%);}
+
+	.section input[id="slide01"]:checked ~ .slide-wrap li:nth-child(1) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide01"]:checked ~ .slide-wrap li:nth-child(1) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	</style>
+
   <body>
+    
+    
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">공지</a>
+      <a href="#">로드맵</a>
+      <a href="#">게시판</a>
+      <a href="#">테스트</a>
+    </div>
+    
+    
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
     <!-- Navbar Start -->
     <div class="container-fluid bg-light position-relative shadow">
       <nav
@@ -63,9 +160,9 @@
           <div class="navbar-nav font-weight-bold mx-auto py-0">
             <a href="index.html" class="nav-item nav-link">Home</a>
             <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="class.html" class="nav-item nav-link">Classes</a>
+            <a href="class.html" class="nav-item nav-link active">Classes</a>
             <a href="team.html" class="nav-item nav-link">Teachers</a>
-            <a href="gallery.html" class="nav-item nav-link active">Gallery</a>
+            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
             <div class="nav-item dropdown">
               <a
                 href="#"
@@ -86,127 +183,136 @@
     </div>
     <!-- Navbar End -->
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary mb-5">
-      <div
-        class="d-flex flex-column align-items-center justify-content-center"
-        style="min-height: 400px"
-      >
-        <h3 class="display-3 font-weight-bold text-white">Gallery</h3>
-        <div class="d-inline-flex text-white">
-          <p class="m-0"><a class="text-white" href="">Home</a></p>
-          <p class="m-0 px-2">/</p>
-          <p class="m-0">Gallery</p>
-        </div>
+    <!-- slider Start -->
+    <div class="section">
+      <input type="radio" name="slide" id="slide01" checked>
+      <input type="radio" name="slide" id="slide02">
+      <input type="radio" name="slide" id="slide03">
+      <div class="slide-wrap">
+        <ul class="slidelist">
+          <li>
+            <a>
+              <label for="slide03" class="left"></label>
+              <div class="textbox">
+                <h3>코딩교육의 효과</h3>
+                <p>경험하세용</p>
+              </div>
+              <img src="./img/class-1.jpg">
+              <label for="slide02" class="right"></label>
+            </a>
+          </li>
+          <li>
+            <a>
+              <label for="slide01" class="left"></label>
+              <div class="textbox">
+                <h3>놀지말고</h3>
+                <p>공부해</p>
+              </div>
+              <img src="./img/class-2.jpg">
+              <label for="slide03" class="right"></label>
+            </a>
+          </li>
+          <li>
+            <a>
+              <label for="slide02" class="left"></label>
+              <div class="textbox">
+                <h3>아직도 놀고있니</h3>
+                <p>이제 공부하자</p>
+              </div>
+              <img src="./img/class-3.jpg">
+              <label for="slide01" class="right"></label>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-    <!-- Header End -->
+    <!-- slider End -->
 
-    <!-- Gallery Start -->
-    <div class="container-fluid pt-5 pb-3">
-      <div class="container">
-        <div class="text-center pb-2">
-          <p class="section-title px-5">
-            <span class="px-2">Our Gallery</span>
-          </p>
-          <h1 class="mb-4">Our Kids School Gallery</h1>
-        </div>
-        <div class="row">
-          <div class="col-12 text-center mb-2">
-            <ul class="list-inline mb-4" id="portfolio-flters">
-              <li class="btn btn-outline-primary m-1 active" data-filter="*">
-                All
-              </li>
-              <li class="btn btn-outline-primary m-1" data-filter=".first">
-                Playing
-              </li>
-              <li class="btn btn-outline-primary m-1" data-filter=".second">
-                Drawing
-              </li>
-              <li class="btn btn-outline-primary m-1" data-filter=".third">
-                Reading
-              </li>
-            </ul>
+
+    <div class="row">
+      <div class="col-lg-4 mb-5">
+        <div class="card border-0 bg-light shadow-sm pb-2">
+          <img class="card-img-top mb-2" src="img/class-1.jpg" alt="" />
+          <div class="card-body text-center">
+            <h4 class="card-title">Drawing Class</h4>
+            <p class="card-text">
+              Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
+              ipsum duo et no et, ipsum ipsum erat duo amet clita duo
+            </p>
           </div>
-        </div>
-        <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-            <div class="position-relative overflow-hidden mb-2">
-              <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="" />
-              <div
-                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
-              >
-                <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
-                </a>
+          <div class="card-footer bg-transparent py-4 px-5">
+            <div class="row border-bottom">
+              <div class="col-6 py-1 text-right border-right">
+                <strong>Age of Kids</strong>
               </div>
+              <div class="col-6 py-1">3 - 6 Years</div>
+            </div>
+            <div class="row border-bottom">
+              <div class="col-6 py-1 text-right border-right">
+                <strong>Total Seats</strong>
+              </div>
+              <div class="col-6 py-1">40 Seats</div>
+            </div>
+            <div class="row border-bottom">
+              <div class="col-6 py-1 text-right border-right">
+                <strong>Class Time</strong>
+              </div>
+              <div class="col-6 py-1">08:00 - 10:00</div>
+            </div>
+            <div class="row">
+              <div class="col-6 py-1 text-right border-right">
+                <strong>Tution Fee</strong>
+              </div>
+              <div class="col-6 py-1">$290 / Month</div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-            <div class="position-relative overflow-hidden mb-2">
-              <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="" />
-              <div
-                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
-              >
-                <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-            <div class="position-relative overflow-hidden mb-2">
-              <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="" />
-              <div
-                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
-              >
-                <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-            <div class="position-relative overflow-hidden mb-2">
-              <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="" />
-              <div
-                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
-              >
-                <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-            <div class="position-relative overflow-hidden mb-2">
-              <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="" />
-              <div
-                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
-              >
-                <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
-                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-            <div class="position-relative overflow-hidden mb-2">
-              <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="" />
-              <div
-                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
-              >
-                <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
-                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+          <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
         </div>
       </div>
-    </div>
-    <!-- Gallery End -->
+      <div class="col-lg-4 mb-5">
+        <div class="card border-0 bg-light shadow-sm pb-2">
+          <img class="card-img-top mb-2" src="img/class-2.jpg" alt="" />
+          <div class="card-body text-center">
+            <h4 class="card-title">Language Learning</h4>
+            <p class="card-text">
+              Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
+              ipsum duo et no et, ipsum ipsum erat duo amet clita duo
+            </p>
+          </div>
+          <div class="card-footer bg-transparent py-4 px-5">
+            <div class="row border-bottom">
+              <div class="col-6 py-1 text-right border-right">
+                <strong>Age of Kids</strong>
+              </div>
+              <div class="col-6 py-1">3 - 6 Years</div>
+            </div>
+            <div class="row border-bottom">
+              <div class="col-6 py-1 text-right border-right">
+                <strong>Total Seats</strong>
+              </div>
+              <div class="col-6 py-1">40 Seats</div>
+            </div>
+            <div class="row border-bottom">
+              <div class="col-6 py-1 text-right border-right">
+                <strong>Class Time</strong>
+              </div>
+              <div class="col-6 py-1">08:00 - 10:00</div>
+            </div>
+            <div class="row">
+              <div class="col-6 py-1 text-right border-right">
+                <strong>Tution Fee</strong>
+              </div>
+              <div class="col-6 py-1">$290 / Month</div>
+            </div>
+          </div>
+          <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+        </div>
+      </div>
 
+
+
+
+    
     <!-- Footer Start -->
     <div
       class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5"
