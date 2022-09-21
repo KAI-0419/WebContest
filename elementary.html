@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>KidKinder - Kindergarten Website Template</title>
+    <title>유아 및 초등생</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
@@ -34,104 +34,7 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
-  <style>
-    body {
-      font-family: "Lato", sans-serif;
-    }
-    
-    .sidenav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #111;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-    }
-    
-    .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
-    
-    .sidenav a:hover {
-      color: #f1f1f1;
-    }
-    
-    .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
-    
-    @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
-    }
-    </style>
-
-<style>
-	* {margin:0;padding:0;}
-	.section {}
-	.section input[id*="slide"] {display:none;}
-
-	.section .slide-wrap {max-width:1200px;margin:0 auto;}
-	.section .slidelist {white-space:nowrap;font-size:0;overflow:hidden;}
-	.section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
-	.section .slidelist > li > a {display:block;position:relative;}
-	.section .slidelist > li > a img {width:100%;}
-	.section .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
-	.section .slidelist .left {left:30px;background:url('./img/left.png') center center / 100% no-repeat;}
-	.section .slidelist .right {right:30px;background:url('./img/right.png') center center / 100% no-repeat;}
-	.section .slidelist .textbox {position:absolute;z-index:1;top:50%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
-	
-	.section .slidelist .textbox h3 {font-size:50px;color:#fff;opacity:0;transform:translateY(30px);transition:all .5s;}
-	.section .slidelist .textbox p {font-size:24px;color:#fff;opacity:0;transform:translateY(30px);transition:all .5s;}
-
-	.section input[id="slide01"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(0%);}
-	.section input[id="slide02"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-100%);}
-	.section input[id="slide03"]:checked ~ .slide-wrap .slidelist > li {transform:translateX(-200%);}
-
-	.section input[id="slide01"]:checked ~ .slide-wrap li:nth-child(1) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
-	.section input[id="slide01"]:checked ~ .slide-wrap li:nth-child(1) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
-	.section input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
-	.section input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
-	.section input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
-	.section input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
-	</style>
-
   <body>
-    
-    
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#">공지</a>
-      <a href="#">로드맵</a>
-      <a href="#">게시판</a>
-      <a href="#">테스트</a>
-    </div>
-    
-    
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-    
-    <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-    }
-    
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    }
-    </script>
     <!-- Navbar Start -->
     <div class="container-fluid bg-light position-relative shadow">
       <nav
@@ -142,8 +45,8 @@
           class="navbar-brand font-weight-bold text-secondary"
           style="font-size: 50px"
         >
-          <i class="flaticon-043-teddy-bear"></i>
-          <span class="text-primary">KidKinder</span>
+        <i class="fa-solid fa-terminal"></i>
+          <span class="text-primary">CodeShip</span>
         </a>
         <button
           type="button"
@@ -158,174 +61,215 @@
           id="navbarCollapse"
         >
           <div class="navbar-nav font-weight-bold mx-auto py-0">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="class.html" class="nav-item nav-link active">Classes</a>
-            <a href="team.html" class="nav-item nav-link">Teachers</a>
-            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+            <a href="about.html" class="nav-item nav-link">About Us
+            </a>
             <div class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                >Pages</a
-              >
-              <div class="dropdown-menu rounded-0 m-0">
-                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                <a href="single.html" class="dropdown-item">Blog Detail</a>
-              </div>
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">코딩 로드맵</a>
+            <div class="dropdown-menu rounded-0 m-0">
+              <a href="elementary.html" class="dropdown-item">유아 및 초등생</a>
+              <a href="adult.html" class="dropdown-item">일반, 전공자, 비전공자</a>
             </div>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
           </div>
-          <a href="" class="btn btn-primary px-4">Join Class</a>
-        </div>
+            <a href="community.html" class="nav-item nav-link">커뮤니티</a>
+            <a href="notice.html" class="nav-item nav-link">공지사항</a>
+            
+            
+          </div>
+      <a href="" class="btn btn-primary px-4">로그인</a>
+      </div>
       </nav>
     </div>
     <!-- Navbar End -->
 
-    <!-- slider Start -->
-    <div class="section">
-      <input type="radio" name="slide" id="slide01" checked>
-      <input type="radio" name="slide" id="slide02">
-      <input type="radio" name="slide" id="slide03">
-      <div class="slide-wrap">
-        <ul class="slidelist">
-          <li>
-            <a>
-              <label for="slide03" class="left"></label>
-              <div class="textbox">
-                <h3>코딩교육의 효과</h3>
-                <p>경험하세용</p>
-              </div>
-              <img src="./img/class-1.jpg">
-              <label for="slide02" class="right"></label>
-            </a>
-          </li>
-          <li>
-            <a>
-              <label for="slide01" class="left"></label>
-              <div class="textbox">
-                <h3>놀지말고</h3>
-                <p>공부해</p>
-              </div>
-              <img src="./img/class-2.jpg">
-              <label for="slide03" class="right"></label>
-            </a>
-          </li>
-          <li>
-            <a>
-              <label for="slide02" class="left"></label>
-              <div class="textbox">
-                <h3>아직도 놀고있니</h3>
-                <p>이제 공부하자</p>
-              </div>
-              <img src="./img/class-3.jpg">
-              <label for="slide01" class="right"></label>
-            </a>
-          </li>
-        </ul>
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary mb-5">
+      <div
+        class="d-flex flex-column align-items-center justify-content-center"
+        style="min-height: 400px"
+      >
+        <h3 class="display-3 font-weight-bold text-white">KINDER & ELEMENTARY</h3>
+        <div class="d-inline-flex text-white">
+          <p class="m-0">유아</p>
+          <p class="m-0 px-2"> / </p>
+          <p class="m-0">초등생</p>
+        </div>
       </div>
     </div>
-    <!-- slider End -->
+    <!-- Header End -->
 
-
-    <div class="row">
-      <div class="col-lg-4 mb-5">
-        <div class="card border-0 bg-light shadow-sm pb-2">
-          <img class="card-img-top mb-2" src="img/class-1.jpg" alt="" />
-          <div class="card-body text-center">
-            <h4 class="card-title">Drawing Class</h4>
-            <p class="card-text">
-              Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
-              ipsum duo et no et, ipsum ipsum erat duo amet clita duo
-            </p>
-          </div>
-          <div class="card-footer bg-transparent py-4 px-5">
-            <div class="row border-bottom">
-              <div class="col-6 py-1 text-right border-right">
-                <strong>Age of Kids</strong>
-              </div>
-              <div class="col-6 py-1">3 - 6 Years</div>
-            </div>
-            <div class="row border-bottom">
-              <div class="col-6 py-1 text-right border-right">
-                <strong>Total Seats</strong>
-              </div>
-              <div class="col-6 py-1">40 Seats</div>
-            </div>
-            <div class="row border-bottom">
-              <div class="col-6 py-1 text-right border-right">
-                <strong>Class Time</strong>
-              </div>
-              <div class="col-6 py-1">08:00 - 10:00</div>
-            </div>
-            <div class="row">
-              <div class="col-6 py-1 text-right border-right">
-                <strong>Tution Fee</strong>
-              </div>
-              <div class="col-6 py-1">$290 / Month</div>
-            </div>
-          </div>
-          <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+    <!-- 커리큘럼 로드맵 Blog Start -->
+    <div class="container-fluid pt-5">
+      <div class="container">
+        <div class="text-center pb-2">
+          <p class="section-title px-5">
+            <span class="px-2">유아 및 초등 교육과정</span>
+          </p>
+          <h1 class="mb-4">Kinder
+            <br> & <br>Elementary</h1>
         </div>
-      </div>
-      <div class="col-lg-4 mb-5">
-        <div class="card border-0 bg-light shadow-sm pb-2">
-          <img class="card-img-top mb-2" src="img/class-2.jpg" alt="" />
-          <div class="card-body text-center">
-            <h4 class="card-title">Language Learning</h4>
-            <p class="card-text">
-              Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
-              ipsum duo et no et, ipsum ipsum erat duo amet clita duo
-            </p>
-          </div>
-          <div class="card-footer bg-transparent py-4 px-5">
-            <div class="row border-bottom">
-              <div class="col-6 py-1 text-right border-right">
-                <strong>Age of Kids</strong>
-              </div>
-              <div class="col-6 py-1">3 - 6 Years</div>
-            </div>
-            <div class="row border-bottom">
-              <div class="col-6 py-1 text-right border-right">
-                <strong>Total Seats</strong>
-              </div>
-              <div class="col-6 py-1">40 Seats</div>
-            </div>
-            <div class="row border-bottom">
-              <div class="col-6 py-1 text-right border-right">
-                <strong>Class Time</strong>
-              </div>
-              <div class="col-6 py-1">08:00 - 10:00</div>
-            </div>
-            <div class="row">
-              <div class="col-6 py-1 text-right border-right">
-                <strong>Tution Fee</strong>
-              </div>
-              <div class="col-6 py-1">$290 / Month</div>
-            </div>
-          </div>
-          <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
-        </div>
-      </div>
-
-
-
-
     
+      
+         
+              <img class="card-img-top" src="img/curri road.jpg" alt="" />
+             
+              <div class="card-body bg-light text-center p-4">
+              
+                <div class="d-flex justify-content-center mb-3">
+                  
+                </div>
+               
+                <a href="" class="btn btn-primary px-4 mx-auto my-2"
+                  >GO!</a
+                >
+              </div>
+            </div>
+          </div>
+         
+    <!-- Blog End -->
+
+<!-- 유아Blog Start -->
+<div class="container-fluid pt-5">
+  <div class="container">
+    <div class="text-center pb-2">
+      <p class="section-title px-5">
+        <span class="px-2">유아 교육과정</span>
+      </p>
+      <h1 class="mb-4">Basic Step</h1>
+    </div>
+    <div class="row pb-3">
+      <div class="col-lg-4 mb-4">
+        <div class="card border-0 shadow-sm mb-2">
+          <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="" />
+          <div class="card-body bg-light text-center p-4">
+            <h4 class="">Step 1<br>코딩이란?<br>(About Coding)</h4>
+            
+            <p>
+             코딩을 배우기 위한 코딩이 무엇인지,<br> 알아가보는 시간
+            </p>
+            <a href="" class="btn btn-primary px-4 mx-auto my-2"
+              >GO!</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card border-0 shadow-sm mb-2">
+          <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
+          <div class="card-body bg-light text-center p-4">
+            <h4 class="">Step 2<br>언플러그드 컴퓨팅<br>(Unplugged Computing)</h4>
+            
+            <p>
+             컴퓨터로 직접해보기 전, <br>컴퓨터와 친해지는 단계!
+            </p>
+            <a href="" class="btn btn-primary px-4 mx-auto my-2"
+              >GO!</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card border-0 shadow-sm mb-2">
+          <img class="card-img-top mb-2" src="img/blog-3.jpg" alt="" />
+          <div class="card-body bg-light text-center p-4">
+            <h4 class="">Step 3<br>엔트리 & 스크래치<br>(Entry & Scratch)</h4>
+            
+            <p>
+              기초 코딩의 시작, Entry와 Scratch<br> 내가 만들어보자!
+            </p>
+            <a href="" class="btn btn-primary px-4 mx-auto my-2"
+              >GO!</a
+            >
+          </div>
+        </div>
+      </div>
+     
+      </div>
+     
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Blog End -->
+
+    <!-- 초등생Blog Start -->
+    <div class="container-fluid pt-5">
+      <div class="container">
+        <div class="text-center pb-2">
+          <p class="section-title px-5">
+            <span class="px-2">초등생 교육과정</span>
+          </p>
+          <h1 class="mb-4">Basic Application</h1>
+        </div>
+        <div class="row pb-3">
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm mb-2">
+              <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="" />
+              <div class="card-body bg-light text-center p-4">
+                <h4 class="">Step 1<br>언플러그드 컴퓨팅<br>(Unplugged Computing)</h4>
+                
+                <p>
+                  심화된 Unplugged Computing <br>더 숙달시키자!
+                </p>
+                <a href="" class="btn btn-primary px-4 mx-auto my-2"
+                  >GO!</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm mb-2">
+              <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
+              <div class="card-body bg-light text-center p-4">
+                <h4 class="">Step 2<br>스크래치<br>(Scratch)</h4>
+                
+                <p>
+                  스크래치를 더 자유분방하게 <br>멋있게 다루고 만들어보자
+                </p>
+                <a href="" class="btn btn-primary px-4 mx-auto my-2"
+                  >GO!</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm mb-2">
+              <img class="card-img-top mb-2" src="img/blog-3.jpg" alt="" />
+              <div class="card-body bg-light text-center p-4">
+                <h4 class="">Step 3<br>엠봇<br>(M Bot)</h4>
+                
+                
+                <p>
+                  배워본 스크래치를 <br>로봇과 함께 배워보자!
+                </p>
+                <a href="" class="btn btn-primary px-4 mx-auto my-2"
+                  >GO!</a
+                >
+              </div>
+            </div>
+          </div>
+      
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- Blog End -->
+
+
     <!-- Footer Start -->
     <div
       class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5"
     >
       <div class="row pt-5">
-        <div class="col-lg-3 col-md-6 mb-5">
+        <div class="col-lg-4 col-md-6 mb-5">
           <a
             href=""
             class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
             style="font-size: 40px; line-height: 40px"
           >
-            <i class="flaticon-043-teddy-bear"></i>
-            <span class="text-white">KidKinder</span>
+          <i class="fa-solid fa-terminal"></i>
+            <span class="text-white">CodeShip</span>
           </a>
           <p>
             Labore dolor amet ipsum ea, erat sit ipsum duo eos. Volup amet ea
@@ -360,19 +304,19 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
-          <h3 class="text-primary mb-4">Get In Touch</h3>
+          <h3 class="text-primary mb-4">Contact</h3>
           <div class="d-flex">
             <h4 class="fa fa-map-marker-alt text-primary"></h4>
             <div class="pl-3">
               <h5 class="text-white">Address</h5>
-              <p>123 Street, New York, USA</p>
+              <p>123 Street, Iksan, South Korea</p>
             </div>
           </div>
           <div class="d-flex">
             <h4 class="fa fa-envelope text-primary"></h4>
             <div class="pl-3">
               <h5 class="text-white">Email</h5>
-              <p>info@example.com</p>
+              <p>wku.ac.kr</p>
             </div>
           </div>
           <div class="d-flex">
@@ -384,30 +328,7 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
-          <h3 class="text-primary mb-4">Quick Links</h3>
-          <div class="d-flex flex-column justify-content-start">
-            <a class="text-white mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Home</a
-            >
-            <a class="text-white mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>About Us</a
-            >
-            <a class="text-white mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Our Classes</a
-            >
-            <a class="text-white mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Our Teachers</a
-            >
-            <a class="text-white mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Our Blog</a
-            >
-            <a class="text-white" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Contact Us</a
-            >
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-          <h3 class="text-primary mb-4">Newsletter</h3>
+          <h3 class="text-primary mb-4">newsletter</h3>
           <form action="">
             <div class="form-group">
               <input
@@ -430,36 +351,19 @@
                 class="btn btn-primary btn-block border-0 py-3"
                 type="submit"
               >
-                Submit Now
+                제출하기
               </button>
             </div>
           </form>
         </div>
       </div>
-      <div
-        class="container-fluid pt-5"
-        style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;"
-      >
-        <p class="m-0 text-center text-white">
-          &copy;
-          <a class="text-primary font-weight-bold" href="#">Your Site Name</a>.
-          All Rights Reserved.
-
-          <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-          Designed by
-          <a class="text-primary font-weight-bold" href="https://htmlcodex.com"
-            >HTML Codex</a
-          >
-          <br />Distributed By:
-          <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-        </p>
-      </div>
+      
     </div>
     <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary p-3 back-to-top"
-      ><i class="fa fa-angle-double-up"></i
+      ><i>UP</i
     ></a>
 
     <!-- JavaScript Libraries -->
@@ -475,6 +379,7 @@
     <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
+    <script src="https://kit.fontawesome.com/c33ab0571e.js" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
